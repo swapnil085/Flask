@@ -1,0 +1,55 @@
+<h1>Add rooms</h1>
+ <form action="" method="POST">
+   <div class="form-group">
+     <label>Name of the building : </label>
+     <input type="text" name="name" class="form-control" value={{request.form.name}}>
+   </div><br>
+   <div class="form-group">
+     <label>Flat no: </label>
+     <input type="text" name="flat" class="form-control" value={{request.form.flat}}>
+   </div><br>
+   <div class="form-group">
+     <label>Square feet Area : </label>
+     <input type="text" name="square" class="form-control" value={{request.form.square}}>
+   </div><br>
+   <div class="form-group">
+     <label>Rent : </label>
+     <input type="text" name="rent" class="form-control" value={{request.form.rent}}>
+   </div><br>
+   <!--<div class="form-group">
+     <label>Type : </label>
+     <input type="text" name="Type" class="form-control" value={{request.form.type}}>
+   </div><br>-->
+   <div class="form-group">
+     <label>Type : </label>
+     <select name="Type">
+    <option value="1bhk">1BHK</option>
+    <option value="2bhk">2BHK</option>
+    <option value="3bhk">3BHK</option>
+  </select>
+   </div><br>
+   <div class="form-group">
+     <label>No of Bathrooms : </label>
+     <input type="text" name="bathrooms" class="form-control" value={{request.form.bathrooms}}>
+   </div><br>
+   <!--
+   <div class="form-group">
+     <label>Maintanence (1 or 0): </label>
+     <input type="checkbox" name="vehicle" value={{request.form.maintanence}}><br>
+   </div><br> -->
+
+   <div class="form-group">
+     <label>Maintanence : </label>
+     <select name="maintanence">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+   </div><br>
+   <div class="form-group">
+     <label>Electricity account Number : </label>
+     <input type="text" name="electricity" class="form-control" value={{request.form.electricity}}>
+   </div><br>
+   <button type="submit" class="btn btn-primary">Save</button><br><br>
+   <a href="/">Home</a> &nbsp | &nbsp
+   <a href="/add_building">Add Building</a>
+ </form>
